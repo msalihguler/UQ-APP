@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">UQ - APP</string>
+    <string name="text_start_game">Start Game</string>
+    <string name="welcome_message">Welcome to one and only</string>
+</resources>

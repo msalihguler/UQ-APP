@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="intro_page_largetext_size">75sp</dimen>
+    <dimen name="button_default_height">8dp</dimen>
+    <dimen name="button_default_width">16dp</dimen>
+    <dimen name="corner_circle_size">8dp</dimen>
+    <dimen name="main_distance_between_views">8dp</dimen>
+    <dimen name="regular_text_size">16sp</dimen>
+    <dimen name="button_stroke_size">2dp</dimen>
+</resources>
