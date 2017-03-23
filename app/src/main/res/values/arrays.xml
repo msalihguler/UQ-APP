@@ -108,4 +108,40 @@
         <item>776 BC,500 BC,800 BC,657 BC</item>
         <item>Rebelais,Francis Bacorr,Kepler,Gutenberg</item>
     </string-array>
+    <string-array name="science_questions_array">
+        <item>Which Russian chemist devised the first form of the periodic table in 1869?</item>
+        <item>What is the lightest element?</item>
+        <item>Which elements below is the part of "Inert Elements" group in periodic table?</item>
+        <item>What is the iconic interjection used by Archimedes when he found out that ,when stepped into bathroom,the volume of water displaced must be equal to the volume of the part of his body he had submerged ?</item>
+        <item>Which subatomic particles are found in the nucleus of an atom?</item>
+        <item>Which form of cloud has an anvil shape and is associated with heavy showers and storms?</item>
+        <item>What is DNA an abbreviation for?</item>
+        <item>What term is used in mathematics for a number, such as Pi or √2, which cannot be expressed as a fraction?</item>
+        <item>What is the mathematical series that starts 0,1,1,2,3,5,8,13,21 called?</item>
+        <item>What was the only probe that has so far been sent to Uranus and Neptune?</item>
+    </string-array>
+    <string-array name="science_answers_array">
+        <item>Dmitri Mendeleev</item>
+        <item>Hydrogen</item>
+        <item>Helium,Neon</item>
+        <item>Eureka</item>
+        <item>Protons,Neutrons</item>
+        <item>Cumulonimbus</item>
+        <item>Deoxyribonucleic Acid</item>
+        <item>An irrational number</item>
+        <item>A Fibonacci Series</item>
+        <item>Voyager</item>
+    </string-array>
+    <string-array name="science_options_array">
+        <item>Dmitri Mendeleev,Vladimir Shukhov,Konstantin Novoselov,Alexander Popov</item>
+        <item></item>
+        <item>Helium,Neon,Hydrogen,Carbon</item>
+        <item></item>
+        <item>Protons,Neutrons,Electrons,Photon</item>
+        <item>Cumulonimbus,Cirrus,Stratus,Nimbostratus</item>
+        <item>Denukleous anti-matter,Ribonuclecic Acid,Deoxyribonucleic Acid,Duonukleoid Arter</item>
+        <item>An Integer, A square number, An irrational number, A rational number</item>
+        <item>A Da Vinci Series,A Fibonacci Series,Continues Numbers ,Pacino Numbers</item>
+        <item>Voyager,Curiosity,Rosetta,Lunokhod</item>
+    </string-array>
 </resources>

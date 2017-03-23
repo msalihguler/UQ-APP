@@ -76,7 +76,25 @@ public class QuizActivity extends AppCompatActivity {
         }
         if(category.equals(getString(R.string.history_category_name))) {
             createHistoryQuiz();
+        } if(category.equals(getString(R.string.science_category_name))) {
+            createScienceQuiz();
         }
+    }
+
+    private void createScienceQuiz() {
+        String[] questionExplanations = getResources().getStringArray(R.array.science_questions_array);
+        String[] questionOptions = getResources().getStringArray(R.array.science_options_array);
+        String[] questionAnswers = getResources().getStringArray(R.array.science_answers_array);
+
+        for(int i = 0; i<questionExplanations.length; i++) {
+            Question question = new Question();
+            question.setQuestionText(questionExplanations[i]);
+            question.setOptions(Arrays.asList(questionOptions[i].split(",")));
+            question.setQuestionsRightAnswers(Arrays.asList(questionAnswers[i].split(",")));
+            questions.add(question);
+        }
+        startQuiz();
+        questionNumber = 0;
     }
 
     private void createHistoryQuiz() {
