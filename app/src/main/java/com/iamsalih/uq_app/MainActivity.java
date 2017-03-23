@@ -10,7 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends Activity implements View.OnClickListener {
 
     public static final String EXTRA_CATEGORY = "category";
     @Override
@@ -19,11 +19,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         TextView categoryMessage = (TextView)findViewById(R.id.category_title);
-        String username = "";
+        String username = getString(R.string.empty_string);
         if(getIntent().getExtras() != null) {
             username = getIntent().getExtras().getString(LandingActivity.EXTRA_USERNAME);
         }
-        getSupportActionBar().setTitle(getString(R.string.categories));
         categoryMessage.setText(getString(R.string.pick_category_message,username));
         CardView sportButton = (CardView)findViewById(R.id.category_sport);
         sportButton.setOnClickListener(this);
@@ -38,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-        String category = "";
+        String category = getString(R.string.empty_string);;
         switch (view.getId()) {
             case R.id.category_sport:
                 category = getString(R.string.sport_category_name);

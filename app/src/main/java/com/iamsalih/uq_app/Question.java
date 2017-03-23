@@ -1,5 +1,8 @@
 package com.iamsalih.uq_app;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,13 +10,23 @@ import java.util.List;
  * Created by muhammedsalihguler on 19/03/2017.
  */
 
-public class Question {
+public class Question implements Parcelable {
 
     private String questionText;
     private List<String> questionsRightAnswers;
     private List<String> options;
     private String category;
     private boolean isAnswerCorrect;
+
+    public boolean isAnswerCorrect() {
+
+        return isAnswerCorrect;
+    }
+
+    public void setAnswerCorrect(boolean answerCorrect) {
+
+        isAnswerCorrect = answerCorrect;
+    }
 
     public Question(){
         questionsRightAnswers = new ArrayList<>();
@@ -58,5 +71,15 @@ public class Question {
     public void setCategory(String category) {
 
         this.category = category;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+
     }
 }

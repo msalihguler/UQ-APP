@@ -63,9 +63,8 @@ public class LandingActivity extends Activity implements View.OnClickListener{
                        }
                    }
                })
-               .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+               .setNegativeButton(getString(R.string.cancel_text), new DialogInterface.OnClickListener() {
                    public void onClick(DialogInterface dialog, int id) {
-                       // Send the negative button event back to the host activity
                        dialog.dismiss();
                    }
                });

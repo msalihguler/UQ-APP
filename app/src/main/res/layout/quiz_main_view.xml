@@ -1,52 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
     <TextView
         android:id="@+id/question_text"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dialog_title_height"
         android:background="@color/colorAccent"
         android:gravity="center"
-        android:textSize="@dimen/regular_text_size"/>
+        android:padding="@dimen/main_distance_between_views"
+        android:textSize="@dimen/regular_text_size" />
+
     <RadioGroup
-                android:id="@+id/radio_holder"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:visibility="gone">
-        <RadioButton android:id="@+id/radio_option_1"
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"/>
-        <RadioButton android:id="@+id/radio_option_2"
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"/>
-        <RadioButton android:id="@+id/radio_option_3"
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"/>
-        <RadioButton android:id="@+id/radio_option_4"
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"/>
+        android:id="@+id/radio_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/main_distance_between_views"
+        android:visibility="gone">
+
+        <RadioButton
+            android:id="@+id/radio_option_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/radio_option_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/radio_option_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/radio_option_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </RadioGroup>
+
     <LinearLayout
-                  android:id="@+id/checkbox_holder"
-                  android:orientation="vertical"
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:visibility="gone">
-        <CheckBox android:id="@+id/checkbox_option_1"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"/>
-        <CheckBox android:id="@+id/checkbox_option_2"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"/>
-        <CheckBox android:id="@+id/checkbox_option_3"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"/>
-        <CheckBox android:id="@+id/checkbox_option_4"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"/>
+        android:id="@+id/checkbox_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/main_distance_between_views"
+        android:visibility="gone">
+
+        <CheckBox
+            android:id="@+id/checkbox_option_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <CheckBox
+            android:id="@+id/checkbox_option_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <CheckBox
+            android:id="@+id/checkbox_option_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <CheckBox
+            android:id="@+id/checkbox_option_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
     <LinearLayout
@@ -54,21 +76,35 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:padding="@dimen/main_distance_between_views"
         android:visibility="gone">
+
         <EditText
             android:id="@+id/answer_textfield"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/main_distance_between_views"/>
+            android:layout_margin="@dimen/main_distance_between_views" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/answers_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/regular_text_size"
+        android:padding="@dimen/main_distance_between_views"
+        android:visibility="gone" />
+
     <Button
         android:id="@+id/submit_answer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/button_selector"
-        android:textColor="@drawable/button_text_color_selector"
         android:layout_gravity="center"
         android:layout_margin="@dimen/main_distance_between_views"
+        android:background="@drawable/button_selector"
         android:text="@string/submit"
-        android:visibility="gone"/>
+        android:textColor="@drawable/button_text_color_selector"
+        android:padding="@dimen/main_distance_between_views"
+        android:visibility="gone" />
 </LinearLayout>

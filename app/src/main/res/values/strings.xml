@@ -12,4 +12,16 @@
     <string name="art_category_name">Art</string>
     <string name="science_category_name">Science</string>
     <string name="not_selected_error">No option selected</string>
+    <string name="category_edittext">EditText</string>
+    <string name="category_checkbox">CheckBox</string>
+    <string name="category_radioButton">Radio Button</string>
+    <string name="empty_string" />
+    <string name="right_answers" formatted="false">Question %d was wrong.\nRight answer as follows: %s \n</string>
+    <string name="result_text">You have %d correct answer.</string>
+    <string name="full_success_message" formatted="false">\nYou have made every question correct!</string>
+    <string name="start_new_quiz">Start New Quiz!</string>
+    <string name="warning_title">Warning</string>
+    <string name="warning_message">If you go back all of your process will be deleted!</string>
+    <string name="accept_text">Accept</string>
+    <string name="cancel_text">Cancel</string>
 </resources>

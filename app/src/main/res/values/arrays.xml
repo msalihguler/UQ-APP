@@ -27,9 +27,9 @@
     <string-array name="sport_options_array">
         <item>Spain,Russia,Germany,Qatar</item>
         <item></item>
-        <item>Rafael Nadal, Roger Federe, Novak Djokovic, Pete Sampras</item>
+        <item>Rafael Nadal,Roger Federer, Novak Djokovic, Pete Sampras</item>
         <item>Ronaldo Lima,Lionel Messi,Thierry Henry,Eric Cantona</item>
-        <item>Sugar Ray Leonard, Muhammad Ali, Mike Tyson, Joe Louis</item>
+        <item>Sugar Ray Leonard,Muhammad Ali,Mike Tyson,Joe Louis</item>
         <item>Michael Jordan,Tiger Woods, Floyd Mayweather,Michael Schumacher</item>
         <item>Australia,Spain,Denmark,Brazil</item>
         <item></item>
