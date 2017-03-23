@@ -2,4 +2,14 @@
     <string name="app_name">UQ - APP</string>
     <string name="text_start_game">Start Game</string>
     <string name="welcome_message">Welcome to one and only</string>
+    <string name="submit">Submit</string>
+    <string name="title_username_input">Please enter your name below</string>
+    <string name="fill_field_message">Please fill the field!</string>
+    <string name="pick_category_message">Welcome %s. Please pick a category.</string>
+    <string name="categories">Categories</string>
+    <string name="history_category_name">History</string>
+    <string name="sport_category_name">Sport</string>
+    <string name="art_category_name">Art</string>
+    <string name="science_category_name">Science</string>
+    <string name="not_selected_error">No option selected</string>
 </resources>

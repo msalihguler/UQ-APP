@@ -7,4 +7,6 @@
     <dimen name="main_distance_between_views">8dp</dimen>
     <dimen name="regular_text_size">16sp</dimen>
     <dimen name="button_stroke_size">2dp</dimen>
+    <dimen name="dialog_title_height">100dp</dimen>
+    <dimen name="category_height_and_width">150dp</dimen>
 </resources>

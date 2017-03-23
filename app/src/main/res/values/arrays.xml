@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sport_questions_array">
+        <item>Where would 2022 will be held?</item>
+        <item>Who has the most olympic medals in History?</item>
+        <item>Who is the man tennis player who has the most grand slam titles in history?</item>
+        <item>Which of these players have won a world cup in their carrier?</item>
+        <item>Who is the boxing legend who previously known as "Cassius Marcellus Clay Jr." before he changed his name?</item>
+        <item>Who is the worlds most paid athlete of all time according to Forbes?</item>
+        <item>Which countries below hosted olympic games before?</item>
+        <item>How many player consists at a football match for one team (not including substitutes)?</item>
+        <item>Which of these are the medal types that they give to winners according to their placement?</item>
+        <item>Which team has the most titles in Champions League History?</item>
+    </string-array>
+    <string-array name="sport_answers_array">
+        <item>Qatar</item>
+        <item>Michael Phelps</item>
+        <item>Roger Federer</item>
+        <item>Ronaldo Lima,Thierry Henry</item>
+        <item>Muhammad Ali</item>
+        <item>Michael Jordan</item>
+        <item>Australia,Spain,Brazil</item>
+        <item>11</item>
+        <item>Gold,Silver,Bronze</item>
+        <item>Real Madrid</item>
+    </string-array>
+    <string-array name="sport_options_array">
+        <item>Spain,Russia,Germany,Qatar</item>
+        <item></item>
+        <item>Rafael Nadal, Roger Federe, Novak Djokovic, Pete Sampras</item>
+        <item>Ronaldo Lima,Lionel Messi,Thierry Henry,Eric Cantona</item>
+        <item>Sugar Ray Leonard, Muhammad Ali, Mike Tyson, Joe Louis</item>
+        <item>Michael Jordan,Tiger Woods, Floyd Mayweather,Michael Schumacher</item>
+        <item>Australia,Spain,Denmark,Brazil</item>
+        <item></item>
+        <item>Gold,Silver,Platinum,Bronze</item>
+        <item>Real Madrid,FC Barcelona,AC Milan,FC Bayern Munich</item>
+    </string-array>
+    <string-array name="art_questions_array">
+        <item>Who is the famous Dutch painter who created \"The Starry Night\", \"Cafe Terrace at Night\",\"Irises\" and more paintings through his life?</item>
+        <item>Who has the most Grammys awards so far?</item>
+        <item>Which 3 movies below sharing the most Oscar awards in the History title?</item>
+        <item>Who is the Austrian musician who composed art pieces as \"The Magic Flute\", \"La clemenza di Tito\" and \"Symphony No. 40\" ?</item>
+        <item>What is the fictional character who is an orphan and on his eleventh birthday, he learns he is a wizard,also he has a identifying scar in his forehead?</item>
+        <item>Which of the following actors has never won an oscar?</item>
+        <item>Which book of Fyodor Dostoyevkies\' tells the things happened to main character Raskolvikov?</item>
+        <item>How many professional theatres combined together to create \"Broadway\" ?</item>
+        <item>Which books below belongs to J.R.R Tolkien?</item>
+        <item>Who painted a late 15th-century mural known as the Last Supper?</item>
+    </string-array>
+    <string-array name="art_answers_array">
+        <item>Vincent van Gogh</item>
+        <item>Georg Solti</item>
+        <item>Titanic,Ben Hur,The Lord of the Rings: The Return of the King</item>
+        <item>Wolfgang Amadeus Mozart</item>
+        <item>Harry Potter</item>
+        <item>Tom Cruise,Amy Adams</item>
+        <item>Crime and Punishment</item>
+        <item>41</item>
+        <item>Silmarillon,Hobbit,Children of Hurin</item>
+        <item>Leonardo da Vinci</item>
+    </string-array>
+    <string-array name="art_options_array">
+        <item>Vincent van Gogh,Salvador Dali,Rembrandt van Rijn, Jan Steen</item>
+        <item>Kanye West,Georg Solti,Adele,Beyoncé</item>
+        <item>Titanic,Ben Hur,La La Land,The Lord of the Rings: The Return of the King</item>
+        <item>Wolfgang Amadeus Mozart,Ludwig van Beethoven,Sergei Rachmaninoff,Pyotr Ilyich Tchaikovsky</item>
+        <item>Harry Potter</item>
+        <item>Tom Cruise,Emma Stone,Leonardo DiCaprio,Amy Adams</item>
+        <item>Crime and Punishment,War and Peace,A Tale of Two Cities,Les Miserables</item>
+        <item></item>
+        <item>Silmarillon,Hobbit,Eragon,Children of Hurin</item>
+        <item>Michalengelo,Leonardo da Vinci,Rafael,Donatello</item>
+    </string-array>
+    <string-array name="history_questions_array">
+        <item>In what year did Christopher Columbus land in North America?</item>
+        <item>What was the other name given to the French and Indian War (1756-1763)?</item>
+        <item>Which was the Napoleon last battle in which he was captured and exiled to St Helena?</item>
+        <item>The Industrial Revolution First took place in...</item>
+        <item>Which of the components below is some combatants of World War II?</item>
+        <item>Who was the author of ,famous classic, The Republic ?</item>
+        <item>Who Discovered the sea route from Europe to India?</item>
+        <item>When did the French Revolution occurred?</item>
+        <item> When ancient Olympic games first held ?</item>
+        <item>Who was the Renaissance scientist who explained how planets moved around the sun?</item>
+    </string-array>
+    <string-array name="history_answers_array">
+        <item>1492</item>
+        <item>The Seven Years\' War</item>
+        <item>Battle of Waterloo</item>
+        <item>England</item>
+        <item>Japan,Soviet Union,United Kingdom</item>
+        <item>Plato</item>
+        <item>Vasco-da-Gama</item>
+        <item>1789</item>
+        <item>776 BC</item>
+        <item>Kepler</item>
+    </string-array>
+    <string-array name="history_options_array">
+        <item>1492,1482,1587,1570</item>
+        <item>Second War, Seventh War, 18th Century War, The Seven Years\' War</item>
+        <item>The Seven Years\' War,Battle of Waterloo,Civil War,War of Gallipolli</item>
+        <item>France,Germany,England,Italy</item>
+        <item>Japan,Soviet Union,Denmark,United Kingdom</item>
+        <item>Aristole,Plato,Herodotus,Alexander</item>
+        <item>Columbus,Marco Polo,Vasco-da-Gama,Magellan</item>
+        <item></item>
+        <item>776 BC,500 BC,800 BC,657 BC</item>
+        <item>Rebelais,Francis Bacorr,Kepler,Gutenberg</item>
+    </string-array>
+</resources>
