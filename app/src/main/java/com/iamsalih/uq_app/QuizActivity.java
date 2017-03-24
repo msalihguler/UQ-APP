@@ -99,6 +99,7 @@ public class QuizActivity extends Activity {
         }
     }
 
+
     private void createQuiz(String[] questionExplanations,String[] questionOptions,String[] questionAnswers) {
         for(int i = 0; i<questionExplanations.length; i++) {
             Question question = new Question();
@@ -109,7 +110,6 @@ public class QuizActivity extends Activity {
         }
         generateQuizQuestion();
     }
-
 
     private void generateQuizQuestion() {
         if(isQuizContinues()) {
@@ -193,23 +193,6 @@ public class QuizActivity extends Activity {
         });
     }
 
-
-    private void resetViews() {
-
-        textFieldHolder.setVisibility(View.GONE);
-        checkboxHolder.setVisibility(View.GONE);
-        radioButtonHolder.setVisibility(View.GONE);
-        submitButton.setVisibility(View.GONE);
-
-        questionText.setText(getString(R.string.empty_string));
-        radioButtonHolder.clearCheck();
-        checkbox_option_1.setChecked(false);
-        checkbox_option_2.setChecked(false);
-        checkbox_option_3.setChecked(false);
-        checkbox_option_4.setChecked(false);
-        editText.getText().clear();
-    }
-
     private void createCheckboxQuestion() {
         final Question question = questions.get(questionNumber);
         checkboxHolder.setVisibility(View.VISIBLE);
@@ -222,19 +205,7 @@ public class QuizActivity extends Activity {
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                List<String> answers = new ArrayList<String>();
-                if(checkbox_option_1.isChecked())
-                    answers.add(checkbox_option_1.getText().toString());
-                if(checkbox_option_2.isChecked())
-                    answers.add(checkbox_option_2.getText().toString());
-                if(checkbox_option_3.isChecked())
-                    answers.add(checkbox_option_3.getText().toString());
-                if(checkbox_option_4.isChecked())
-                    answers.add(checkbox_option_4.getText().toString());
-                if(questions.get(questionNumber).getQuestionsRightAnswers().containsAll(answers))
-                    question.setAnswerCorrect(true);
-                else
-                    question.setAnswerCorrect(false);
+                checkBoxAnswerCheck(question);
                 questionNumber++;
                 resetViews();
                 generateQuizQuestion();
@@ -264,6 +235,22 @@ public class QuizActivity extends Activity {
 
     }
 
+    private void resetViews() {
+
+        textFieldHolder.setVisibility(View.GONE);
+        checkboxHolder.setVisibility(View.GONE);
+        radioButtonHolder.setVisibility(View.GONE);
+        submitButton.setVisibility(View.GONE);
+
+        questionText.setText(getString(R.string.empty_string));
+        radioButtonHolder.clearCheck();
+        checkbox_option_1.setChecked(false);
+        checkbox_option_2.setChecked(false);
+        checkbox_option_3.setChecked(false);
+        checkbox_option_4.setChecked(false);
+        editText.getText().clear();
+    }
+
     private String checkQuestionType() {
         Question question = questions.get(questionNumber);
         if(question.getOptions().size() == 1) {
@@ -277,6 +264,38 @@ public class QuizActivity extends Activity {
         }
     }
 
+    private void createWarningDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(getString(R.string.warning_title));
+        builder.setMessage(getString(R.string.warning_message));
+        builder.setPositiveButton(getString(R.string.accept_text), new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                finish();
+            }
+        }).setNegativeButton(getString(R.string.cancel_text), new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                dialog.dismiss();
+            }
+        });
+        Dialog dialog = builder.create();
+        dialog.show();
+    }
+
+    private void checkBoxAnswerCheck(Question question) {
+        List<String> answers = new ArrayList<String>();
+        if(checkbox_option_1.isChecked())
+            answers.add(checkbox_option_1.getText().toString());
+        if(checkbox_option_2.isChecked())
+            answers.add(checkbox_option_2.getText().toString());
+        if(checkbox_option_3.isChecked())
+            answers.add(checkbox_option_3.getText().toString());
+        if(checkbox_option_4.isChecked())
+            answers.add(checkbox_option_4.getText().toString());
+        if(answers.containsAll(questions.get(questionNumber).getQuestionsRightAnswers()))
+            question.setAnswerCorrect(true);
+        else
+            question.setAnswerCorrect(false);
+    }
     @Override
     public void onBackPressed() {
         if(isQuizContinues()) {
@@ -286,20 +305,5 @@ public class QuizActivity extends Activity {
         }
     }
 
-    private void createWarningDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle(getString(R.string.warning_title));
-        builder.setMessage(getString(R.string.warning_message));
-        builder.setPositiveButton(getString(R.string.accept_text), new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int id) {
-                    finish();
-                }
-            }).setNegativeButton(getString(R.string.cancel_text), new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        dialog.dismiss();
-                    }
-                });
-        Dialog dialog = builder.create();
-        dialog.show();
-    }
+
 }
