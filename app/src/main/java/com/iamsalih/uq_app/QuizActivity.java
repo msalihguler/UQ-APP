@@ -76,7 +76,10 @@ public class QuizActivity extends Activity {
         radioButton_option_2 = (RadioButton)findViewById(R.id.radio_option_2);
         radioButton_option_3 = (RadioButton)findViewById(R.id.radio_option_3);
         radioButton_option_4 = (RadioButton)findViewById(R.id.radio_option_4);
-        generateQuestions(category);
+        if(questions == null)
+            generateQuestions(category);
+        else
+            generateQuizQuestion();
     }
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {

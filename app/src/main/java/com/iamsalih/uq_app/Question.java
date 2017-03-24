@@ -18,6 +18,29 @@ public class Question implements Parcelable {
     private String category;
     private boolean isAnswerCorrect;
 
+    protected Question(Parcel in) {
+
+        questionText = in.readString();
+        questionsRightAnswers = in.createStringArrayList();
+        options = in.createStringArrayList();
+        category = in.readString();
+        isAnswerCorrect = in.readByte() != 0;
+    }
+
+    public static final Creator<Question> CREATOR = new Creator<Question>() {
+        @Override
+        public Question createFromParcel(Parcel in) {
+
+            return new Question(in);
+        }
+
+        @Override
+        public Question[] newArray(int size) {
+
+            return new Question[size];
+        }
+    };
+
     public boolean isAnswerCorrect() {
 
         return isAnswerCorrect;
@@ -81,5 +104,10 @@ public class Question implements Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
 
+        dest.writeString(questionText);
+        dest.writeStringList(questionsRightAnswers);
+        dest.writeStringList(options);
+        dest.writeString(category);
+        dest.writeByte((byte) (isAnswerCorrect ? 1 : 0));
     }
 }
