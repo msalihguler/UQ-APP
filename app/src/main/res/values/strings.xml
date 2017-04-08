@@ -24,4 +24,6 @@
     <string name="warning_message">If you go back all of your process will be deleted!</string>
     <string name="accept_text">Accept</string>
     <string name="cancel_text">Cancel</string>
+    <string name="show_result_button_text">Show My Result</string>
+    <string name="show_result_message">You have finished the test\nClick below button to see your result!</string>
 </resources>

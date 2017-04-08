@@ -30,6 +30,7 @@ public class QuizActivity extends Activity {
 
     private final String EXTRA_QUESTION_NUMBER = "question_number";
     private final String EXTRA_ANSWERS_KEY  = "answer_key";
+    private final String EXTRA_BOOLEAN_ANSWERS_SCREEN = "extra_answers";
     private ArrayList<Question> questions;
     private int questionNumber = 0;
     private TextView questionText;
@@ -47,7 +48,7 @@ public class QuizActivity extends Activity {
     private RadioButton radioButton_option_3;
     private RadioButton radioButton_option_4;
     private TextView resultsText;
-
+    private Boolean isResultsScreen = false;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,6 +61,7 @@ public class QuizActivity extends Activity {
         if(savedInstanceState != null){
             questionNumber = savedInstanceState.getInt(EXTRA_QUESTION_NUMBER);
             questions = savedInstanceState.getParcelableArrayList(EXTRA_ANSWERS_KEY);
+            isResultsScreen = savedInstanceState.getBoolean(EXTRA_BOOLEAN_ANSWERS_SCREEN);
         }
         questionText = (TextView)findViewById(R.id.question_text);
         resultsText = (TextView)findViewById(R.id.answers_text);
@@ -76,15 +78,20 @@ public class QuizActivity extends Activity {
         radioButton_option_2 = (RadioButton)findViewById(R.id.radio_option_2);
         radioButton_option_3 = (RadioButton)findViewById(R.id.radio_option_3);
         radioButton_option_4 = (RadioButton)findViewById(R.id.radio_option_4);
-        if(questions == null)
+        if(questions == null) {
             generateQuestions(category);
-        else
+        } else {
             generateQuizQuestion();
+        }
+        if(isResultsScreen) {
+            showResults();
+        }
     }
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
         savedInstanceState.putInt(EXTRA_QUESTION_NUMBER, questionNumber);
         savedInstanceState.putParcelableArrayList(EXTRA_ANSWERS_KEY,questions);
+        savedInstanceState.putBoolean(EXTRA_BOOLEAN_ANSWERS_SCREEN,isResultsScreen);
         super.onSaveInstanceState(savedInstanceState);
     }
     private void generateQuestions(String category) {
@@ -125,8 +132,21 @@ public class QuizActivity extends Activity {
                 createRadioButtonQuestion();
             }
         } else {
-            showResults();
+            enableShowResultButton();
         }
+    }
+
+    private void enableShowResultButton() {
+        resetViews();
+        submitButton.setText(getString(R.string.show_result_button_text));
+        submitButton.setVisibility(View.VISIBLE);
+        questionText.setText(getString(R.string.show_result_message));
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showResults();
+            }
+        });
     }
 
     private void showResults() {
@@ -152,6 +172,7 @@ public class QuizActivity extends Activity {
         if(trueResult == questions.size())
             resultTitle += getString(R.string.full_success_message);
         questionText.setText(resultTitle);
+        createToastForResult(resultTitle);
         submitButton.setText(getString(R.string.start_new_quiz));
         submitButton.setVisibility(View.VISIBLE);
         submitButton.setOnClickListener(new View.OnClickListener() {
@@ -160,6 +181,10 @@ public class QuizActivity extends Activity {
                 finish();
             }
         });
+        isResultsScreen = true;
+    }
+    private void createToastForResult(String resultTitle) {
+        Toast.makeText(this,resultTitle,Toast.LENGTH_SHORT).show();
     }
 
     private boolean isQuizContinues() {
