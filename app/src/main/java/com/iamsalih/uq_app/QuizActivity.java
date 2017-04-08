@@ -233,10 +233,14 @@ public class QuizActivity extends Activity {
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                checkBoxAnswerCheck(question);
-                questionNumber++;
-                resetViews();
-                generateQuizQuestion();
+                if(checkbox_option_1.isChecked() || checkbox_option_2.isChecked() || checkbox_option_3.isChecked() || checkbox_option_4.isChecked()) {
+                    checkBoxAnswerCheck(question);
+                    questionNumber++;
+                    resetViews();
+                    generateQuizQuestion();
+                } else {
+                    Toast.makeText(QuizActivity.this, getString(R.string.not_selected_error), Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
@@ -249,15 +253,19 @@ public class QuizActivity extends Activity {
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(editText.getText().toString().trim().equalsIgnoreCase(questions.get(questionNumber).getQuestionsRightAnswers().get(0)))
-                    question.setAnswerCorrect(true);
-                else
-                    question.setAnswerCorrect(false);
-                InputMethodManager inputManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
-                questionNumber++;
-                resetViews();
-                generateQuizQuestion();
+                if(editText.getText().toString().trim().equals(getString(R.string.empty_string))) {
+                    Toast.makeText(QuizActivity.this, getString(R.string.fill_field_message), Toast.LENGTH_SHORT).show();
+                } else {
+                    if (editText.getText().toString().trim().equalsIgnoreCase(questions.get(questionNumber).getQuestionsRightAnswers().get(0)))
+                        question.setAnswerCorrect(true);
+                    else
+                        question.setAnswerCorrect(false);
+                    InputMethodManager inputManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                    inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+                    questionNumber++;
+                    resetViews();
+                    generateQuizQuestion();
+                }
             }
         });
 
