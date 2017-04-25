@@ -327,10 +327,12 @@ public class QuizActivity extends Activity {
             answers.add(checkbox_option_3.getText().toString());
         if(checkbox_option_4.isChecked())
             answers.add(checkbox_option_4.getText().toString());
-        if(answers.containsAll(questions.get(questionNumber).getQuestionsRightAnswers()))
+        if (answers.containsAll(questions.get(questionNumber).getQuestionsRightAnswers())
+                && answers.size() == questions.get(questionNumber).getQuestionsRightAnswers().size()) {
             question.setAnswerCorrect(true);
-        else
+        } else {
             question.setAnswerCorrect(false);
+        }
     }
     @Override
     public void onBackPressed() {
